@@ -1,0 +1,759 @@
+/* --------------------------------Import Fonts --------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* --------------------------------Root Variables --------------------------------*/
+:root {
+    --new-white: #F2EFEA;
+    --light-color: #EAE4D8;
+    --dark-color: #20202E;
+    --primary-color: #3E3C52;
+    --secondary-color: #C79E66;
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: "Manstein";
+    src: url("fonts/Manstein.ttf");
+}
+
+/* --------------------------------Reset Styles-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color); /* Page background */
+    margin: 0;
+    padding: 0;
+    font-family: "Bellota Text", sans-serif;
+}
+
+main {
+    margin: 20px;
+}
+
+/* Responsive adjustments for general */
+@media (min-width: 768px) {
+    main {
+        margin: 70px;
+    }
+}
+
+/* --------------------------------Breadcrumbs Styling--------------------------------*/
+.breadcrumbs {
+    background-color: var(--primary-color); /* Set the background color to match theme */
+    padding: 10px 0;
+    margin-left: 10px; /* Reduce margin on smaller screens */
+    margin-bottom: 15px; /* Adjust space between breadcrumbs and content */
+    font-family: "Bellota Text", sans-serif;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    align-items: center;
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs li {
+    margin-right: 5px; /* Reduce space between breadcrumb items */
+    font-size: 14px;
+    color: var(--light-color);
+}
+
+.breadcrumbs li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: var(--light-color);
+}
+
+.breadcrumbs li a:hover {
+    color: var(--secondary-color); /* Change color on hover */
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: "›"; /* Add a separator (like a right arrow) */
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--light-color);
+}
+
+.breadcrumbs li:last-child {
+    color: var(--secondary-color); /* Different color for the current page */
+}
+
+@media (min-width: 768px) {
+    .breadcrumbs {
+        margin-left: 20px; /* Reduce margin on smaller screens */
+    }
+    
+    .breadcrumbs ol {
+        flex-direction: row; /* Stack items horizontally for larger screens */
+    }
+
+    .breadcrumbs li {
+        margin-right: 10px; /* Standard margin for desktop */
+        font-size: 16px; /* Standard font size for desktop */
+    }
+
+    .breadcrumbs li:not(:last-child)::after {
+        margin-left: 10px; /* Adjust margin for desktop */
+        margin-right: 10px;
+    }
+}
+
+/* --------------------------------Hero Section-------------------------------- */
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    text-align: center; /* Align text in the center */
+    gap: 16px; /* Space between elements */
+    position: relative; /* Needed for positioning the button relative to the hero */
+}
+
+.hero-icon {
+    margin: 0 auto; /* Ensure it centers horizontally */
+    display: block;
+}
+
+.initial-letter {
+    /* Heading Initial */
+    font-family: Manstein;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.heading {
+    /* Heading */
+    font-family: NanumMyeongjo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.hero-heading-container {
+    display: flex;
+    align-items: baseline; /* Aligns the initial letter with the heading */
+    gap: 6px; /* Adds spacing between the initial letter and the heading */
+
+}
+
+.subheading {
+    color: var(--light-color);
+    text-align: center;
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Styling for the hero section */
+.hero-media-container {
+    position: relative; /* Enables positioning for child elements */
+    width: 100%; /* Full width */
+    max-width: 932px; /* Matches desktop image size */
+    height: auto; /* Adjust height dynamically to maintain aspect ratio */
+    min-height: 360px; /* Ensures a minimum height for mobile view */
+}
+
+.hero-picture {
+    width: 100%; /* Take up the full width of the screen */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 360px; /* Limit the height for mobile devices */
+    object-fit: cover; /* Ensures the image is properly cropped if necessary */
+}
+
+.hero-video {
+    position: absolute; /* Overlaps the image */
+    top: 0; /* Aligns with the top of the container */
+    left: 0; /* Aligns with the left of the container */
+    width: 100%; /* Matches the width of the image */
+    height: 100%; /* Matches the height of the image */
+    object-fit: cover; /* Ensures the video fills the container */
+    opacity: 0.5; /* Makes the video semi-transparent */
+    pointer-events: none; /* Prevents user interaction with the video */
+}
+
+/* Hero Buttons*/
+.hero-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 165px;
+    height: 51px;
+    background: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 25px; /* Rounded corners */
+    color: var(--dark-color);
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden; /* Ensures decorations stay inside */
+    position: relative;
+    margin-top: 16px; /* Add some space between the button and the image */
+    align-self: flex-end; /* Align the button to the right within the container */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.hero-button:hover {
+    background: rgba(199, 158, 102, 0.70); /* Change background color on hover */
+}
+
+.decor-left,
+.decor-right {
+    position: absolute;
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+}
+
+.decor-left {
+    bottom: 5px; /* Position in bottom-left corner */
+    left: 5px;
+}
+
+.decor-right {
+    top: 5px; /* Position in top-right corner */
+    right: 5px;
+}
+
+.hero-picture-container {
+    width: 100%;
+    max-width: 932px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for hero section */
+@media (min-width: 768px) {
+    .initial-letter {
+        font-size: 64px;
+    }
+    .heading {
+        font-size: 48px;
+    }
+    .hero-icon {
+        width: 80px;
+        height: 80px;
+    }
+    .subheading {
+        font-size: 20px;
+    }
+
+    .hero-media-container {
+        max-width: 932px; /* Matches desktop image size */
+        height: 594px; /* Matches desktop image height */
+        min-height: 594px; /* Ensure the height doesn't get too small */
+    }
+
+    .hero-picture {
+        height: 100%; /* Ensures it fills the height of the container */
+        max-height: none; /* Allow it to extend freely */
+    }
+
+    .hero-video {
+        height: 100%; /* Ensure the video fills the height of the container */
+    }
+
+    .hero-button {
+        width: 243px;
+        height: 51px;
+        font-size: 20px;
+    }
+}
+
+
+/* --------------------------------Main Content Section --------------------------------*/
+.secondary-heading-initial {
+    color: var(--new-white);
+    font-family: Manstein;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.secondary-heading {
+    color: var(--new-white);
+    font-family: NanumMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.secondary-heading-container {
+    display: flex;
+    align-items: baseline; /* Aligns the initial letter with the heading */
+    gap: 6px; /* Adds spacing between the initial letter and the heading */
+}
+
+p {
+    color: var(--new-white);
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for general main section */
+@media (min-width: 768px) {
+    .secondary-heading-initial {
+        font-size: 48px;
+    }
+    .secondary-heading {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+/* Snow Divider on a Separate Line with Margin */
+.divider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0; /* Margin on top and bottom */
+    width: 100%
+}
+
+.divider {
+    width: 98px;
+    height: 20px;
+}
+
+/* --------------------------------Opening Hours Section --------------------------------*/
+.opening-hours-time {
+    display: flex;
+    align-items: baseline; /* Aligns the opening hours */
+    gap: 50px; /* Adds spacing between the two opening hours */
+}
+
+.opening-hours-days {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+/* Responsive adjustments for Opening hours*/
+@media (min-width: 768px) {
+    .opening-hours-time {
+        gap: 300px;
+    }
+}
+
+/* --------------------------------About Adventmarkt section*--------------------------------/
+/* Container for the About content */
+.about-content {
+    display: flex; /* Default to row layout for larger screens */
+    flex-direction: column; /* Stack elements vertically for mobile */
+    align-items: center; /* Center content horizontally */
+    width: 100%;
+    margin-top: 20px; /* Space between heading and content */
+}
+
+/* For the Adventmarkt video container */
+.adventmarkt-video-container {
+    display: flex; /* Flexbox container for the video and description */
+    flex-direction: column; /* Stack video and description vertically on mobile */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin-top: 30px; /* Space between description and video */
+    text-align: center; /* Ensure the description text is centered */
+    width: 100%; /* Take up full width */
+}
+
+/* Description for the video */
+.video-description {
+    margin-top: 10px; /* Add spacing between video and description */
+    font-family: "Bellota Text", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Responsive adjustments for About section*/
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Switch to row layout for desktop */
+        justify-content: space-between; /* Space out the video and description */
+        align-items: flex-start; /* Align content to the top */
+    }
+
+    /* For the Adventmarkt video container */
+    .adventmarkt-video-container {
+        flex-direction: column; /* Keep video and description in column for desktop */
+        align-items: flex-start; /* Align video and description to the left */
+        width: 60%; /* Give video container 50% width */
+        margin-top: 0; /* Remove the extra top margin */
+        margin-left: 20px;
+    }
+
+    /* Adjust the size of the video for desktop */
+    .adventmarkt-video-container video {
+        width: 100%; /* Make the video take up full container width */
+        max-width: 500px; /* Limit max-width for the video */
+    }
+    .video-description {
+        font-size: 20px;
+    }
+}
+
+
+/*--------------------------------Food Section --------------------------------*/
+.motto {
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+/* Gallery container */
+.image-gallery {
+    display: flex;
+    gap: 30px;  /* Space between items */
+    align-items: flex-start;
+    flex-shrink: 0;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    position: relative;
+    padding: 20px 0; /* Space above and below */
+    width: 100%; /* Ensure container takes full width */
+}
+
+/* Food Image Card */
+.food-image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensure padding is included */
+}
+
+/* Food description at the bottom */
+.food-description {
+    background-color: var(--light-color);
+    width: 100%;
+    text-align: center;
+    color: var(--dark-color);
+    line-height: 31px;
+    padding: 5px 0;
+}
+
+/* Left and right arrows */
+.view-more-arrow {
+    width: 24px;
+    height: 24px;
+}
+
+/* Left Arrow */
+.view-more-left {
+    position: sticky;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Right Arrow */
+.view-more-right {
+    position: sticky;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Responsive adjustments for food gallery*/
+@media (max-width: 767px) {
+    .image-gallery {
+        width: 100%; /* Full width */
+        gap: 15px; /* Smaller gap for mobile */
+    }
+
+    .food-image {
+        width: 169px; /* Fixed width for mobile */
+        height: 154px; /* Fixed height for mobile */
+        object-fit: cover; /* Crop the image to fit without distortion */
+    }
+
+    .food-description {
+        width: 169px; /* Ensures the description width matches the card width */
+    }
+}
+
+/* Desktop version - show four images at a time */
+@media (min-width: 768px) {
+    .image-gallery {
+        width: 100%; /* Full width */
+        overflow-x: scroll; /* Horizontal scrolling */
+        gap: 30px; /* Space between images */
+    }
+
+    .food-image {
+        width: 300px; /* Larger size for desktop */
+        height: 250px; /* Larger height for desktop */
+        object-fit: cover; /* Crop the image to fit without distortion */
+    }
+
+    .food-description {
+        width: 300px; /* Description width adjusted to match the image size */
+    }
+
+    .view-more-arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* --------------------------------Christmas Shopping Section-------------------------------- */
+
+.christmas-shopping {
+    display: flex;
+    flex-direction: column; /* Default layout for mobile */
+    gap: 16px;
+}
+
+
+/* Container for the image */
+.shopping-image-container {
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    align-items: center; /* Center-align in mobile view */
+    text-align: center;
+}
+
+.shopping-image {
+    width: 297px;
+    height: 200px;
+    object-fit: cover; /* Ensures image fits nicely */
+    margin: 16px 0px; /* Adds spacing between text and image */
+}
+
+.image-description {
+    margin-top: 8px; /* Space between image and description */
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Responsive Adjustments for Shopping Section */
+@media (min-width: 768px) { 
+    .christmas-shopping {
+        flex-direction: row; /* Side-by-side layout for desktop */
+        align-items: flex-start; /* Aligns content to the top */
+        gap: 24px;
+    }
+
+    .christmas-shopping-text {
+        width: 40%;
+    }
+
+
+    .shopping-image-container {
+        text-align: left; /* Align image description left */
+        margin-left: 100px; /* Reset margins for desktop */
+    }
+
+    .shopping-image {
+        width: 541px;
+        height: 336px;
+        margin: 0; /* Remove extra spacing */
+    }
+
+    .image-description {
+        text-align: left; /* Align description text with image */
+        font-size: 20px;
+    }
+}
+
+
+/* --------------------------------Christmas Crafting Section --------------------------------*/
+h4 {
+    color: var(--new-white);
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+/* Responsive Adjustments for Crafting Section */
+@media (min-width: 768px) {
+    h4 {
+        font-size: 20px;
+    }
+}
+
+/* --------------------------------Nightwatchman, History Section -------------------------------- */
+/* Container for the whole section */
+.history {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Container for the nightwatchman image and text */
+.nightwatchman-content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.night-watch-man-image {
+    width: 127px;    
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.nightwatchman-text {
+    font-size: 16px;
+    color: var(--new-white);
+    max-width: 80%;
+}
+
+/* Responsive Adjustments for History Section */
+@media (min-width: 769px) {
+    .nightwatchman-content {
+        flex-direction: row-reverse; /* Swap the order: text first, image second */
+        justify-content: space-between; /* Ensure there's space between the text and the image */
+    }
+
+    .night-watch-man-image {
+        width: 280px;
+        height: 354px;
+        margin-left: 20px; /* Space between image and text */
+    }
+
+    .nightwatchman-text {
+        max-width: 50%; /* Adjust the width for desktop */
+        font-size: 20px; 
+    }
+
+    .image-description {
+        font-size: 20px;
+    }
+}
+
+
+/* --------------------------------Social Organizations -------------------------------- */
+
+.social-organizations ul {
+    list-style-type: disc; /* Ensures bullet points are used */
+    padding-left: 20px; /* Adds space before the bullet points */
+    color: var(--new-white); /* Set the text color to white */
+}
+
+/* Styling for the list items */
+.social-organizations ul li {
+    font-size: 16px; /* Optional: Adjust the font size */
+    color: var(--new-white); /* Set the list item text color to white */
+    margin-bottom: 8px; /* Optional: Adds spacing between list items */
+}
+
+/* Responsive Adjustments for Social Organizations */
+@media (min-width: 768px) {
+    .social-organizations ul li {
+        font-size: 20px;
+    }
+}
+
+
+/* --------------------------------Activities Section-------------------------------- */
+.activities-container {
+    display: flex;
+    flex-direction: row; /* Arrange images in a row */
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Adds space between the images */
+    width: 100%;
+    margin-top: 20px; /* Optional: adds space between the text and images */
+}
+
+/* Styling for the individual image containers */
+.activities-image-container {
+    text-align: center; /* Centers the image and the description */
+    width: 100%; /* Ensure the container takes full width of the parent */
+}
+
+/* Styling for the activity images */
+.activities-image {
+    width: 100%; /* Make the image responsive and take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Set a maximum width to prevent the image from getting too large */
+    object-fit: cover; /* Ensures images maintain their aspect ratio */
+    margin-bottom: 10px; /* Adds space between the image and the description */
+}
+
+.image-description {
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Responsive Adjustments for Activities Section */
+@media (max-width: 767px) {
+    .activities-image {
+        width: 100%; /* Take full width of the parent container */
+        max-width: 150px; /* Limit to a max-width for small screens */
+    }
+}
+
+/* Tablet version (medium screens) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .activities-image {
+        width: 100%;
+        max-width: 200px; /* Limit to a max-width for medium screens */
+    }
+}
+
+/* Desktop version (large screens) */
+@media (min-width: 1025px) {
+    .activities-image {
+        width: 100%;
+        max-width: 250px; /* Limit to a max-width for large screens */
+    }
+    .image-description {
+        font-size: 20px;
+    }
+}
+
+
+/* --------------------------------Back to Top Button --------------------------------*/
+.back-to-top {
+    position: fixed; /* Fix the button to the screen */
+    bottom: 50px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right edge of the page */
+    display: flex;
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center; /* Center align both icon and text */
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.back-to-top p {
+    margin-top: 10px; /* Add space between the icon and the text */
+    font-size: 16px; /* Optional: Adjust text size if necessary */
+}
+
+.back-to-top-arrow {
+    width: 30px; /* Adjust the icon size */
+    height: 30px; /* Adjust the icon size */
+}

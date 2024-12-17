@@ -1,0 +1,427 @@
+/* --------------------------------Import Fonts-------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* --------------------------------Root Variables --------------------------------*/
+:root {
+    --new-white: #F2EFEA;
+    --light-color: #EAE4D8;
+    --dark-color: #20202E;
+    --primary-color: #3E3C52;
+    --secondary-color: #C79E66;
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: "Manstein";
+    src: url("fonts/Manstein.ttf");
+}
+
+/* --------------------------------Reset Styles-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color); /* Page background */
+    margin: 0;
+    padding: 0;
+    font-family: "Bellota Text", sans-serif;
+}
+
+main {
+    margin: 20px;
+}
+
+/* Responsive Adjustments for general styling */
+@media (min-width: 768px) {
+    main {
+        margin: 70px;
+    }
+}
+
+/* --------------------------------Breadcrumbs Styling--------------------------------*/
+.breadcrumbs {
+    background-color: var(--primary-color); /* Set the background color to match theme */
+    padding: 10px 0;
+    margin-left: 10px; /* Reduce margin on smaller screens */
+    margin-bottom: 15px; /* Adjust space between breadcrumbs and content */
+    font-family: "Bellota Text", sans-serif;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    align-items: center;
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs li {
+    margin-right: 5px; /* Reduce space between breadcrumb items */
+    font-size: 14px;
+    color: var(--light-color);
+}
+
+.breadcrumbs li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: var(--light-color);
+}
+
+.breadcrumbs li a:hover {
+    color: var(--secondary-color); /* Change color on hover */
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: "›"; /* Add a separator (like a right arrow) */
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--light-color);
+}
+
+.breadcrumbs li:last-child {
+    color: var(--secondary-color); /* Different color for the current page */
+}
+
+@media (min-width: 768px) {
+    .breadcrumbs ol {
+        flex-direction: row; /* Stack items horizontally for larger screens */
+    }
+    
+    .breadcrumbs {
+        margin-left: 20px; /* Reduce margin on smaller screens */
+    }
+
+    .breadcrumbs li {
+        margin-right: 10px; /* Standard margin for desktop */
+        font-size: 16px; /* Standard font size for desktop */
+    }
+
+    .breadcrumbs li:not(:last-child)::after {
+        margin-left: 10px; /* Adjust margin for desktop */
+        margin-right: 10px;
+    }
+}
+
+/* --------------------------------Hero Section-------------------------------- */
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    text-align: center; /* Align text in the center */
+    gap: 16px; /* Space between elements */
+    position: relative; /* Needed for positioning the button relative to the hero */
+}
+
+.hero-icon {
+    margin: 0 auto; /* Ensure it centers horizontally */
+    display: block;
+}
+
+.initial-letter {
+    /* Heading Initial */
+    font-family: Manstein;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.heading {
+    /* Heading */
+    font-family: NanumMyeongjo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.hero-heading-container {
+    display: flex;
+    align-items: baseline; /* Aligns the initial letter with the heading */
+    gap: 6px; /* Adds spacing between the initial letter and the heading */
+
+}
+
+.subheading {
+    color: var(--light-color);
+    text-align: center;
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hero-media-container {
+    position: relative; /* Enables positioning for child elements */
+    width: 100%; /* Full width */
+    max-width: 932px; /* Matches desktop image size */
+    height: auto; /* Adjust height dynamically to maintain aspect ratio */
+    min-height: 360px; /* Ensures a minimum height for mobile view */
+}
+
+.hero-picture {
+    width: 100%; /* Take up the full width of the screen */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 360px; /* Limit the height for mobile devices */
+    object-fit: cover; /* Ensures the image is properly cropped if necessary */
+}
+
+.hero-video {
+    position: absolute; /* Overlaps the image */
+    top: 0; /* Aligns with the top of the container */
+    left: 0; /* Aligns with the left of the container */
+    width: 100%; /* Matches the width of the image */
+    height: 100%; /* Matches the height of the image */
+    object-fit: cover; /* Ensures the video fills the container */
+    opacity: 0.5; /* Makes the video semi-transparent */
+    pointer-events: none; /* Prevents user interaction with the video */
+}
+
+/* Hero Button */
+.hero-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 165px;
+    height: 51px;
+    background: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 25px; /* Rounded corners */
+    color: var(--dark-color);
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden; /* Ensures decorations stay inside */
+    position: relative;
+    margin-top: 16px; /* Add some space between the button and the image */
+    align-self: flex-end; /* Align the button to the right within the container */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.hero-button:hover {
+    background: rgba(199, 158, 102, 0.70); /* Change background color on hover */
+}
+
+.decor-left,
+.decor-right {
+    position: absolute;
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+}
+
+.decor-left {
+    bottom: 5px; /* Position in bottom-left corner */
+    left: 5px;
+}
+
+.decor-right {
+    top: 5px; /* Position in top-right corner */
+    right: 5px;
+}
+
+.hero-picture-container {
+    width: 100%;
+    max-width: 932px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for hero section */
+@media (min-width: 768px) {
+    .initial-letter {
+        font-size: 64px;
+    }
+    .heading {
+        font-size: 48px;
+    }
+    .hero-icon {
+        width: 80px;
+        height: 80px;
+    }
+    .subheading {
+        font-size: 20px;
+    }
+
+    .hero-media-container {
+        max-width: 932px; /* Matches desktop image size */
+        height: 594px; /* Matches desktop image height */
+        min-height: 594px; /* Ensure the height doesn't get too small */
+    }
+
+    .hero-picture {
+        height: 100%; /* Ensures it fills the height of the container */
+        max-height: none; /* Allow it to extend freely */
+    }
+
+    .hero-video {
+        height: 100%; /* Ensure the video fills the height of the container */
+    }
+
+    .hero-button {
+        width: 243px;
+        height: 51px;
+        font-size: 20px;
+    }
+}
+
+
+/* --------------------------------Main Content Section --------------------------------*/
+.secondary-heading-initial {
+    color: var(--new-white);
+    font-family: Manstein;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.secondary-heading {
+    color: var(--new-white);
+    font-family: NanumMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.secondary-heading-container {
+    display: flex;
+    align-items: baseline; /* Aligns the initial letter with the heading */
+    gap: 6px; /* Adds spacing between the initial letter and the heading */
+}
+
+p {
+    color: var(--new-white);
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+/* --------------------------------Responsive Adjustments for main Section-------------------------------- */
+@media (min-width: 768px) {
+    .secondary-heading-initial {
+        font-size: 48px;
+    }
+    .secondary-heading {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+/* Snow Divider on a Separate Line with Margin */
+.divider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0; /* Margin on top and bottom */
+    width: 100%
+}
+
+.divider {
+    width: 98px;
+    height: 20px;
+}
+
+/* --------------------------------Crib exhibition-------------------------------- */
+.crib-exhibition {
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    gap: 16px; /* Space between elements */
+}
+
+.crib-image-container {
+    display: flex;
+    flex-direction: column; /* Stack image and description */
+    align-items: center; /* Center for mobile */
+    margin: 0 auto;
+    width: 201px; /* Mobile image size */
+    height: auto;
+}
+
+.crib-image {
+    width: 201px; /* Mobile size */
+    height: 195px;
+    object-fit: cover; /* Ensures proper scaling */
+}
+
+.image-description {
+    text-align: center; /* Center the description below the image */
+    font-size: 16px;
+    color: var(--new-white);
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* Responsive Adjustments for Nativity Scene Section */
+@media (min-width: 768px) {
+    .crib-exhibition {
+        flex-direction: column; /* Keeps the heading standalone */
+    }
+
+    .crib-paragraphs-and-image {
+        display: flex; /* Align paragraphs and image side by side */
+        gap: 32px; /* Space between text and image */
+    }
+
+    .crib-paragraphs {
+        flex: 1; /* Let the text take available space */
+    }
+
+    .crib-image-container {
+        align-self: flex-start; /* Align the image with the top of the text */
+        width: 396px; /* Desktop size */
+        height: 359px;
+    }
+
+    .crib-image {
+        width: 396px;
+        height: 359px;
+    }
+    .image-description {
+        font-size: 20px;
+    }
+}
+
+.opening-hours {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+/* --------------------------------Back to Top Button --------------------------------*/
+.back-to-top {
+    position: fixed; /* Fix the button to the screen */
+    bottom: 50px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right edge of the page */
+    display: flex;
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center; /* Center align both icon and text */
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.back-to-top p {
+    margin-top: 10px; /* Add space between the icon and the text */
+    font-size: 16px; /* Optional: Adjust text size if necessary */
+}
+
+.back-to-top-arrow {
+    width: 30px; /* Adjust the icon size */
+    height: 30px; /* Adjust the icon size */
+}

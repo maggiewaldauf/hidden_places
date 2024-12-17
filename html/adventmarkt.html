@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventmarkt</title>
+    <link rel="stylesheet" href="/css/adventmarkt.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/popups.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Left Section: Burger Menu for Mobile -->
+        <div class="header-left">
+            <img src="/icons/burger_icon.svg" class="menu-icon" alt="Burger Icon">
+        </div>
+        <!-- Center Section: Logo and Navigation Links -->
+        <div class="header-center">
+            <a href="/index.html">
+                <img src="/images/logo_white.png" class="logo" alt="Logo Lienz">
+            </a>
+        </div>
+        <!-- Right Section: Language Button -->
+        <div class="header-right">
+            <a href="/html/error_page.html" class="lang-button">En/Ger</a>
+        </div>
+    
+        <!-- Navigation Links (for Desktop & Mobile) -->
+        <nav class="nav-links">
+            <div class="menu-item">
+                <a href="/html/about.html">About Lienz</a>
+                <img src="/icons/arrowmenu_down_icon.svg" class="dropdown-icon" alt="Dropdown Icon">
+                <div class="dropdown">
+                    <a href="/html/about.html#hard-facts-lienz">Hard Facts</a>
+                    <a href="/html/about.html#christmas-time-lienz">Lienz at Christmas Time</a>
+                    <a href="/html/about.html#climate-lienz">Climate in Winter</a>
+                    <a href="/html/about.html#transport-lienz">Transportation</a>
+                    <a href="/html/about.html#explore-lienz-section">Map</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="/html/adventmarkt.html">Adventmarkt</a>
+                <img src="/icons/arrowmenu_down_icon.svg" class="dropdown-icon" alt="Dropdown Icon">
+                <div class="dropdown">
+                    <a href="/html/adventmarkt.html#opening-hours-adventmarkt">Opening Hours</a>
+                    <a href="/html/adventmarkt.html#about-adventmarkt">About</a>
+                    <a href="/html/adventmarkt.html#austrian-food-adventmarkt">Austrian Cuisine</a>
+                    <a href="/html/adventmarkt.html#christmas-shopping-adventmarkt">Buying Gifts</a>
+                    <a href="/html/adventmarkt.html#crafting-adventmarkt">Living Workshop</a>
+                    <a href="/html/adventmarkt.html#history-adventmarkt">The Night Watch Man</a>
+                    <a href="/html/adventmarkt.html#social-organizations-adventmarkt">Social Organizations</a>
+                    <a href="/html/adventmarkt.html#other-activities-adventmarkt">Other Activities</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="/html/liebburg.html">Liebburg</a>
+                <img src="/icons/arrowmenu_down_icon.svg" class="dropdown-icon" alt="Dropdown Icon">
+                <div class="dropdown">
+                    <a href="/html/liebburg.html#adventcalendar-liebburg">The Liebburg Advent Calendar</a>
+                    <a href="/html/liebburg.html#crib-exhibition-liebburg">Nativity Scene Exhibition</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="/html/johannesplatz.html">Johannesplatz</a>
+                <img src="/icons/arrowmenu_down_icon.svg" class="dropdown-icon" alt="Dropdown Icon">
+                <div class="dropdown">
+                    <a href="/html/johannesplatz.html#tree-johannesplatz">The Christmas Tree</a>
+                    <a href="/html/johannesplatz.html#krampus-johannesplatz">The Krampus</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- Breadcrumbs -->
+<nav class="breadcrumbs">
+    <ol>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/html/adventmarkt.html">Adventmarkt</a></li>
+        <li>Current Page</li> <!-- Optionally leave out a link for the current page -->
+    </ol>
+</nav>
+
+<!-- Hero-section-->
+<section class="hero-section">
+    <div class="hero">
+        <img class="hero-icon" src="/icons/adventmarkt_icon.svg" alt="Market Icon">
+        <div class="hero-text">
+            <div class="hero-heading-container">
+                <h1 class="initial-letter">A</h1> 
+                <h1 class="heading">dventmarkt</h1>
+            </div>
+            <p class="subheading">Explore the different market stalls of the<br>Lienzer Adventmarkt.</p>
+        </div>
+        <!-- Image and video container -->
+        <div class="hero-media-container">
+            <video class="hero-video" autoplay loop muted>
+                <source src="/videos/snow.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img class="hero-picture" src="/images/adventmarkt.jpg" alt="Adventmarkt Lienz">
+        </div>
+        <!-- Hero Button -->
+        <a href="about.html#map-lienz" class="hero-button">
+            <span>View on Map</span>
+            <img src="/images/new-snow-deco-left.svg" class="decor-left" alt="Snowflake decoration">
+            <img src="/images/new-snow-deco-right.svg" class="decor-right" alt="Snowflake decoration">
+        </a>
+    </div>
+</section>
+
+    <main>
+        <!-- Opening hours section-->
+        <section class="opening-hours" id="opening-hours-adventmarkt">
+            <div class="secondary-heading-container">
+                <h2 class="secondary-heading-initial">O</h2>
+                <h2 class="secondary-heading">pening hours</h2>
+            </div>
+            <div class="opening-hours-container">
+                <p>22 Nov - 24 Dec</p>
+                <div class="opening-hours-time">
+                    <div class="opening-hours-weekdays">
+                        <p class="opening-hours-days">Monday - Thursday</p> 
+                        <p>15:00 - 21:00</p>
+                    </div>
+                    <div class="opening-hours-weekend">
+                        <p class="opening-hours-days">Friday - Sunday</p>
+                        <p>10:00 - 21:00 </p>
+                    </div>
+                </div>
+                <div class="opening-hours-exceptions">
+                    <p>08 Dec & 23 Dec: 10:00 - 21:00 <br> 24 Dec: 09:00 - 13:00</p>
+                </div>
+            </div>
+            <div class="musical-accompaniment-container">
+                <p>Every day, starting from 01 Dec: <br> 18:15: Musical Accompaniment</p>
+                <p class="musical-accompaniment-note">*see exceptions in the program below</p>
+            </div>
+            <!-- Program Button-->
+            <a href="error_page.html" class="hero-button">
+                <span>See program</span>
+                <img src="/images/new-snow-deco-left.svg" class="decor-left" alt="Snowflake decoration">
+                <img src="/images/new-snow-deco-right.svg" class="decor-right" alt="Snowflake decoration">
+            </a>
+            <!-- Decorational Divider-->
+            <div class="divider-container">
+                <img src="/icons/snowdivider.svg" class="divider" alt="Snowflake Divider">
+            </div>
+        </section>
+        
+        <!-- About the Adventmarkt-->
+        <section class="about" id="about-adventmarkt">
+            <div class="secondary-heading-container">
+                <h2 class="secondary-heading-initial">A</h2>
+                <h2 class="secondary-heading">bout the Market</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-description">
+                    <p>The Lienzer Adventmarkt, often called “Christkindlmarkt”, is a cherished tradition in Tyrol. <br> The name “Christkindlmarkt” refers to the belief that on Christmas eve, the Christkind (Baby Jesus) comes to town and gives presents to the children.</p>
+                    <p>First organized in 1997, it has grown to feature 35 beautifully decorated stands.<br> The market offers traditional crafts and delicious regional treats like gingerbread and mulled wine.</p>
+                    <p>Accompanied by festive music and lights, the event hosts around 60 activities each year, making it a magical destination for families and visitors alike.</p>
+                </div>
+                <!-- Adventmarkt Video-->
+                <div class="adventmarkt-video-container">
+                    <video width="320" height="240" controls>
+                        <source src="/videos/adventmarkt.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video> 
+                    <p class="video-description">People enjoying the Christmas Time at the Adventmarkt in Lienz</p>
+                </div>
+            </div>
+            <!-- Decorational Divider-->
+              <div class="divider-container">
+                <img src="/icons/snowdivider.svg" class="divider" alt="Snowflake Divider">
+            </div>
+        </section>
+        
+      <!-- Austrian Cuisine Section -->
+<section class="austrian-food" id="austrian-food-adventmarkt">
+    <div class="secondary-heading-container">
+        <h2 class="secondary-heading-initial">T</h2>
+        <h2 class="secondary-heading">aste the Austrian Cuisine</h2>
+    </div>
+    <div class="cuisine-description">
+        <p class="motto">“Good food, good mood.”</p>
+        <p>This is the right motto to explore the Lienzer Adventmarkt.</p>
+        <p>Have a look at the typical Austrian Christmas Cuisine and enjoy its specialties. There is something for every taste.</p>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+        <!-- Left Arrow -->
+        <div class="view-more-left">
+            <img src="/icons/left-arrow.svg" class="view-more-arrow" alt="Left Arrow">
+        </div>
+        <!-- Food Image Cards -->
+        <div class="food-image-card">
+            <img src="/images/glühwein.jpg" class="food-image" alt="Food Image">
+            <p class="food-description">Glühwein</p>
+        </div>
+        <div class="food-image-card">
+            <img src="/images/punsch.jpg" class="food-image" alt="Food Image">
+            <p class="food-description">Punsch</p>
+        </div>
+        <div class="food-image-card">
+            <img src="/images/kiachl.jpg" class="food-image" alt="Food Image">
+            <p class="food-description">Tiroler Kiachl</p>
+        </div>
+        <div class="food-image-card">
+            <img src="/images/brezn.jpg" class="food-image" alt="Food Image">
+            <p class="food-description">Brezen</p>
+        </div>
+        <div class="food-image-card">
+            <img src="/images/schokofrüchte.jpg" class="food-image" alt="Food Image">
+            <p class="food-description">Sweet Desserts</p>
+        </div>
+        <div class="food-image-card">
+            <img src="/images/speckkknödel.jpg" class="food-image" alt="Food Image">
+            <p class="food-description">Tiroler Knödel</p>
+        </div>
+        <div class="food-image-card">
+            <img src="/images/chestnuts.jpg" class="food-image" alt="Food Image">
+            <p class="food-description">Hot Maroni</p>
+        </div>
+        <div class="food-image-card">
+            <img src="/images/lebzelt.jpg" class="food-image" alt="Food Image">
+            <p class="food-description">Lienzer Lebzelt</p>
+        </div>
+        <!-- Right Arrow -->
+        <div class="view-more-right">
+            <img src="/icons/right-arrow.svg" class="view-more-arrow" alt="Right Arrow">
+        </div>
+    </div> 
+</section>
+
+    <!-- Decorational Divider-->
+    <div class="divider-container">
+        <img src="/icons/snowdivider.svg" class="divider" alt="Snowflake Divider">
+    </div>
+        
+        <!-- Christmas Shopping-->
+        <section class="christmas-shopping-container" id="christmas-shopping-adventmarkt">
+            <div class="secondary-heading-container">
+                <h2 class="secondary-heading-initial">D</h2>
+                <h2 class="secondary-heading">o some Christmas Shopping</h2>
+            </div>
+            <div class="christmas-shopping">
+                <div class="christmas-shopping-text">
+                    <p>There are many stalls of local craftsmen, farmers and companies selling their handmade products.</p>
+                    <p>The products vary from Christmas ornaments to natural beauty products or even frankincense that is used for the Austrian Tradition of the sanctification.</p>
+                </div>
+                <div class="shopping-image-container">
+                    <img src="/images/buy_too.jpg" class="shopping-image" alt="Christmas Market Stalls">
+                    <p class="image-description">Local craftsmen selling their products</p>
+                </div>
+            </div>
+
+            <!-- Decorational Divider-->
+            <div class="divider-container">
+                <img src="/icons/snowdivider.svg" class="divider" alt="Snowflake Divider">
+            </div>
+        </section>
+
+        <!-- Craft Presents-->
+        <section class="crafting" id="crafting-adventmarkt">
+            <div class="secondary-heading-container">
+                <h2 class="secondary-heading-initial">C</h2>
+                <h2 class="secondary-heading">raft your Christmas presents yourself</h2>
+            </div>
+            <p>The "Living Workshop" at the Lienz Advent Market offers visitors a chance to watch artisans and artists demonstrate their crafts in real time. Guests can observe or even participate in activities.</p>
+            <h4>Some Highlights:</h4>
+            <p>Visitors can learn about the mystical world of herbs, wool products and felting techniques, soap-making, crafting greeting cards, making dolls, and creating Christmas ornaments, with artisans explaining each step of their process.</p>
+            <!-- Program Button -->
+            <a href="error_page.html" class="hero-button">
+                <span>See program</span>
+                <img src="/images/new-snow-deco-left.svg" class="decor-left" alt="Snowflake decoration">
+                <img src="/images/new-snow-deco-right.svg" class="decor-right" alt="Snowflake decoration">
+              </a>
+              <!-- Decorational Divider-->
+            <div class="divider-container">
+                <img src="/icons/snowdivider.svg" class="divider" alt="Snowflake Divider">
+            </div>
+        </section>
+
+        <!-- Learn about history -->
+        <section class="history" id="history-adventmarkt">
+            <div class="secondary-heading-container">
+                <h2 class="secondary-heading-initial">L</h2>
+                <h2 class="secondary-heading">earn about Lienz' History</h2>
+            </div>
+            <div class="nightwatchman-content">
+                <div class="nightwatchman-image-container">
+                <img src="/images/nachtwache.webp" class="night-watch-man-image" alt="Lienz' Night watch man">
+                <p class="image-description">Lienz' Night Watchman</p>
+                </div>
+                <div class="nightwatchman-text">
+                    <p>The multilingual night watchman Hannes Rohracher is known for sharing historical insights about the city and enjoying chatting with visitors.</p>
+                    <p>At nightfall, armed with a lantern and halberd, he patrols the market, ensuring all is in order. At precisely 9:00 PM, his traditional night call signals the end of the market day.</p>
+                </div>
+            </div>
+            <!-- Decorational Divider-->
+            <div class="divider-container">
+                <img src="/icons/snowdivider.svg" class="divider" alt="Snowflake Divider">
+            </div>
+        </section>
+
+        <!-- Social organizations -->
+        <section class="social-organizations" id="social-organizations-adventmarkt">
+            <div class="secondary-heading-container">
+                <h2 class="secondary-heading-initial">S</h2>
+                <h2 class="secondary-heading">ocial organizations</h2>
+            </div>
+            <p class="motto">Be good, do good.</p>
+            <p>At the 28th Lienz Advent Market, seven associations participate that support social and humanitarian projects, primarily for those in need in the Lienz district and occasionally abroad.</p>
+            <p class="organizations-examples">The participating organizations and their dates include:</p>
+            <ul>
+                <li>Hand in Hand: Nov 22–24</li>
+                <li>Ausbildungsfit Osttirol: Nov 25–28</li>
+                <li>Diakonie de La Tour: Dec 2–5</li>
+                <li>Rotary Club Lienz: Dec 6–8</li>
+                <li>SoLaLi: Dec 9–12</li>
+                <li>ÖZIV: Dec 13–15</li>
+                <li>Bildung bringt Frieden: Dec 16–23</li>
+              </ul> 
+              <!-- Decorational Divider-->
+              <div class="divider-container">
+                <img src="/icons/snowdivider.svg" class="divider" alt="Snowflake Divider">
+            </div>
+        </section>
+        
+        <!-- Other activities-->
+        <section class="other-activities" id="other-activities-adventmarkt">
+            <div class="secondary-heading-container">
+                <h2 class="secondary-heading-initial">O</h2>
+                <h2 class="secondary-heading">ther Activities</h2>
+            </div>
+            <p>The Adventmarkt in Lienz also offers winterly activities like an Ice Stock Tournament where you can compete for a 1000€ prize in local vouchers. </p> 
+            <p>The kids have the possibility to show their skills at ice skating, skates can be borrowed free of charge at Advent Stand 19 during market hours. </p>
+            <p class="crafting-text">Families can enjoy a range of activities in a heated pavilion from 3–7 PM, including crafts, decorating gingerbread, singing, writing letters, and more.</p>
+            <div class="activities-container">
+                <div class="activities-image-container">
+                    <img src="/images/lattl.jpg" class="activities-image" alt="Lattlschießen">
+                    <p class="image-description">“Lattlschießen” on the ice skating spot</p>
+                </div>
+                <div class="activities-image-container">
+                    <img src="/images/crafting.jpg" class="activities-image" alt="Crafting">
+                    <p class="image-description">Craft Christmas gifts yourself</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Back to Top-->
+        <div class="back-to-top">
+            <img src="/icons/arrowtop_icon.svg" class="back-to-top-arrow" alt="Back to Top Arrow">
+            <p>Back to top</p>
+        </div>
+    </main>
+        
+<!-- Footer -->
+<footer class="fat-footer">
+    <div class="fat-footer-container">
+        <!-- Services Section (left side) -->
+        <section class="services">
+            <h4>Services</h4>
+            <div class="service-items-container" role="list">
+                <div class="service-item" role="listitem">
+                    <a href="https://www.bundeskriminalamt.at/en/emergency_numbers/start.aspx" aria-label="Emergency Services" target="_blank">
+                        <img src="/icons/emergency_icon.svg" alt="Emergency services icon" class="icon-link">
+                    </a>
+                    <p>Emergency</p>
+                </div>
+                <div class="service-item" role="listitem">
+                    <a href="https://www.oebb.at/en/" aria-label="Transport Services" target="_blank">
+                        <img src="/icons/transport_icon.svg" alt="Transport icon" class="icon-link">
+                    </a>
+                    <p>Transport</p>
+                </div>
+                <div class="service-item" role="listitem">
+                    <a href="https://www.bergfex.at/sommer/lienz/wetter/" aria-label="Weather Forecast Services" target="_blank">
+                        <img src="/icons/weather_icon.svg" alt="Weather forecast icon" class="icon-link">
+                    </a>
+                    <p>Weather Forecast</p>
+                </div>
+                <div class="service-item" role="listitem">
+                    <a href="https://lienz.gv.at/en/" aria-label="More Information" target="_blank">
+                        <img src="/icons/more_info_icon.svg" alt="More information icon" class="icon-link">
+                    </a>
+                    <p>More Info</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section (right side) -->
+        <div class="newsletter-container">
+            <h4>Stay merry through our newsletter:</h4>
+            <form class="newsletter-signup-form">
+                <label for="email" class="newsletterLabel">Your email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <a href="#newsletterPopup" id="openNewsletterBtn" class="subscribeButton">
+                    <span>Subscribe</span>
+                    <img src="/images/new-snow-deco-left.svg" class="decor-left" alt="Snowflake decoration">
+                    <img src="/images/new-snow-deco-right.svg" class="decor-right" alt="Snowflake decoration">
+                </a>
+            </form>
+        </div>
+    </div>
+</footer>
+
+    <!-- Popup Container -->
+    <div id="newsletterPopup" class="popup-overlay">
+        <div class="newsletter-confirmation-popup">
+            <a href="#" class="close-icon" aria-label="Close popup">&times;</a>
+            <div class="newsletter-popup-text">
+                <h2 class="popup-secondary-heading">Newsletter Confirmation</h2>
+                <p class="popup-description">
+                Thank you for your subscription! We are happy to accompany you through the Christmas season.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/popups.js"></script>
+</body>
+</html>

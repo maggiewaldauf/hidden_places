@@ -1,0 +1,177 @@
+/* ---------------------- Import Fonts -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* --------------------------------Root Variables-------------------------------- */
+:root {
+    --new-white: #F2EFEA;
+    --light-color: #EAE4D8;
+    --dark-color: #20202E;
+    --primary-color: #3E3C52;
+    --secondary-color: #C79E66;
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: "Manstein";
+    src: url("fonts/Manstein.ttf");
+}
+
+/* --------------------------------Popup Styling-------------------------------- */
+
+/* Center the popup on the screen */
+.krampus-schedule-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    border-radius: 25px;
+    width: 333px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 20px; /* Add padding */
+    z-index: 10000; /* Ensure it appears on top */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup overlay (to detect outside clicks) */
+.popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 9999; /* Below popup but above other content */
+}
+
+
+.newsletter-confirmation-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    width: 333px;
+    height: 295px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    /* Center text vertically and horizontally */
+    display: flex;
+    flex-direction: column; /* Stack the elements */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text inside the container */
+    margin: 20px 20px;
+}
+
+/* Use :target to show the popup */
+#newsletterPopup:target {
+    display: block; /* Show the popup */
+}
+
+/* Close button styling */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* --------------------------------Heading Styling-------------------------------- */
+
+.popup-main-heading-container {
+    display: flex;
+    align-items: baseline; /* Aligns the initial letter with the heading text */
+    gap: 6px; /* Space between the initial letter and the heading */
+    justify-content: flex-start; /* Align content to the left */
+    margin-bottom: 16px; /* Add space below the heading */
+}
+
+.popup-initial-letter {
+    font-size: 32px;
+    color: var(--dark-color);
+    font-family: Manstein;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.popup-heading {
+    font-size: 20px;
+    color: var(--dark-color);
+    font-family: NanumMyeongjo;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.popup-secondary-heading {
+    font-size: 20px;
+    color: var(--dark-color);
+    font-family: "Bellota Text";
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+/* --------------------------------Schedule Styling-------------------------------- */
+
+.events-schedule {
+    color: var(--dark-color);
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.events-schedule p {
+    color: var(--dark-color);
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Reset default paragraph margin */
+}
+
+/* Individual event container */
+.event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between events */
+}
+
+/* Date icon in events */
+.date-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.popup-description {
+    color: var(--dark-color);
+    font-family: "Bellota Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Reset default paragraph margin */
+}
+
+/* --------------------------------Close Icon Styling-------------------------------- */
+
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

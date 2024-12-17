@@ -1,0 +1,172 @@
+/* --------------------------------Import Fonts --------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* --------------------------------Root Variables-------------------------------- */
+:root {
+    --new-white: #F2EFEA;
+    --light-color: #EAE4D8;
+    --dark-color: #20202E;
+    --primary-color: #3E3C52;
+    --secondary-color: #C79E66;
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: "Manstein";
+    src: url("fonts/Manstein.ttf");
+}
+
+/* --------------------------------Reset Styles-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color); /* Page background */
+    margin: 0;
+    padding: 0;
+    font-family: "Bellota Text", sans-serif;
+}
+
+main {
+    margin: 20px;
+}
+
+/* Responsive Adjustments for general styling */
+@media (min-width: 768px) {
+    main {
+        margin: 70px;
+    }
+}
+
+/*-------------------------------- Hero Section-------------------------------- */
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    text-align: center; /* Align text in the center */
+    gap: 16px; /* Space between elements */
+    position: relative; /* Needed for positioning the button relative to the hero */
+}
+
+.error-notification {
+    font-family: Manstein;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--light-color);
+    text-align: center;
+    display: block;
+}
+
+.initial-letter {
+    /* Heading Initial */
+    font-family: Manstein;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.heading {
+    /* Heading */
+    font-family: NanumMyeongjo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.hero-heading-container {
+    display: flex;
+    align-items: baseline; /* Aligns the initial letter with the heading */
+    gap: 6px; /* Adds spacing between the initial letter and the heading */
+}
+
+
+/* Hero section */
+.hero-media-container {
+    position: relative; /* Enables positioning for child elements */
+    width: 100%; /* Full width */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    max-width: 932px; /* Limit the max-width for larger screens */
+    min-height: 360px; /* Set a minimum height to ensure content is visible on smaller screens */
+    aspect-ratio: 16 / 9; /* Enforce a 16:9 aspect ratio for the container */
+}
+
+/* Hero image */
+.hero-picture {
+    width: 100%; /* Make image take full width */
+    height: 100%; /* Make image take full height */
+    object-fit: cover; /* Ensure the image covers the container proportionally */
+}
+
+/* Hero video */
+.hero-video {
+    position: absolute; /* Overlay the video */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the video take the full width of the container */
+    height: 100%; /* Make the video take the full height of the container */
+    object-fit: cover; /* Ensure the video fills the container proportionally */
+    opacity: 0.5; /* Make the video semi-transparent */
+    pointer-events: none; /* Prevent interaction with the video */
+}
+
+
+p {
+    color: var(--new-white);
+    font-family: "Bellota Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+/* Default button styling */
+.back-to-home {
+    text-decoration: underline; /* underline */
+    color: var(--new-white); /* Set default color */
+    background-color: transparent; /* No background */
+    padding: 10px 20px; /* Add some padding */
+    font-family: "Bellota Text"; /* Font styling */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+}
+
+/* Responsive adjustments for hero section */
+@media (min-width: 768px) {
+    .error-notification {
+        font-size: 64px;
+    }
+    .initial-letter {
+        font-size: 64px;
+    }
+    .heading {
+        font-size: 48px;
+    }
+
+    .hero-media-container {
+        max-width: 932px; /* Limit the size on large screens */
+        height: 594px; /* Set a fixed height for larger screens */
+        min-height: 594px; /* Ensure the height doesn't get too small */
+    }
+
+    .hero-picture, .hero-video {
+        height: 100%; /* Ensure both the image and video take the full height of the container */
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
