@@ -451,6 +451,7 @@ p {
 .view-more-arrow {
     width: 25px; /* Set the size of the arrows */
     height: 25px;
+    cursor: pointer;
 }
 
 /* /* Media queries for Testimonial Section: Responsive Mobile Version */
